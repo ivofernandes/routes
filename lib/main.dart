@@ -38,17 +38,19 @@ class MyApp extends StatelessWidget {
 class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
-          children: [
-            const Text('Page1'),
-            MaterialButton(
-              color: Theme.of(context).primaryColor,
-              onPressed: () => Navigator.of(context).pushNamed('/page2'),
-              child: Text('Go to page 2'),
-            ),
-          ],
+    return MaterialApp(
+      home: SafeArea(
+        child: Scaffold(
+          body: Column(
+            children: [
+              const Text('Page1'),
+              MaterialButton(
+                color: Theme.of(context).primaryColor,
+                onPressed: () => Navigator.of(context).pushNamed('/page2'),
+                child: Text('Go to page 2'),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -58,17 +60,19 @@ class Page1 extends StatelessWidget {
 class Page2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
-          children: [
-            const Text('Page2'),
-            MaterialButton(
-              color: Theme.of(context).primaryColor,
-              onPressed: () => Navigator.of(context).pushNamed('/page1'),
-              child: Text('Go to page 1'),
-            ),
-          ],
+    return MaterialApp(
+      home: SafeArea(
+        child: Scaffold(
+          body: Column(
+            children: [
+              const Text('Page2'),
+              MaterialButton(
+                color: Theme.of(context).primaryColor,
+                onPressed: () => Navigator.of(context).pushNamed('/page1'),
+                child: Text('Go to page 1'),
+              ),
+            ],
+          ),
         ),
       ),
     );
